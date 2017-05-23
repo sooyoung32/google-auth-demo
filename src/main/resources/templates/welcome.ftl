@@ -14,6 +14,7 @@ Time: ${time?time}
 Message: ${message}
 
 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<a href="#" onclick="signOut();">Sign out</a>
 <script>
     function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -29,6 +30,13 @@ Message: ${message}
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
     };
+
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
 </script>
 </body>
 
