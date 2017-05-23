@@ -11,7 +11,7 @@ Date: ${time?date}
 <br>
 Time: ${time?time}
 <br>
-Message: ${message}
+Message: ${message} <span id="given_name"></span>
 
 <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 <a href="#" onclick="signOut();">Sign out</a>
@@ -25,7 +25,7 @@ Message: ${message}
         console.log('Family Name: ' + profile.getFamilyName());
         console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
-
+        document.getElementById("given_name").textContent=profile.getGivenName();
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);

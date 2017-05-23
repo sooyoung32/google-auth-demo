@@ -24,11 +24,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile('org.springframework.boot:spring-boot-starter-data-ldap')
 	compile('org.springframework.boot:spring-boot-starter-freemarker')
-	compile('org.springframework.boot:spring-boot-starter-hateoas')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('com.google.api-client:google-api-client:1.22.0')
-    compile('com.google.apis:google-api-services-oauth2:v2-rev127-1.22.0')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
